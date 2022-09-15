@@ -24,7 +24,7 @@ def index(request):
         from : {}
         '''.format(data['message'],data['email'])
         send_mail(data['name'],message,'',['emailtestgin@gmail.com'])
-    return render(request, 'home.html',{'pro':obj})
+    return render(request, 'index.html',{'pro':obj})
 
 # def project()
 
