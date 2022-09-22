@@ -35,12 +35,28 @@ p{
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
 }
-
+h4{
+  color:#306998;
+  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+}
 /*--------scroll--------*/
 .scroll{
-	align-items: center;
 
+		text-align: center;
+		line-height: 50px;
+	}
+	h4{
+		font-size: 25px;
+		color: #306998;
+		animation: blink 1s linear infinite;
+	}
+@keyframes blink{
+0%{opacity: 0;}
+50%{opacity: .5;}
+100%{opacity: 1;}
 }
+
 /*----------------------*/
 .image{
     width:auto;
@@ -51,7 +67,7 @@ img{
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     }
 .navbar .navbar-nav {
   display: inline-block;
@@ -66,12 +82,12 @@ img{
 
 .intro{
   padding-bottom:75;
-  position: absolute;
-  text-align:left ;
+  position: relative;
+  text-align:left center;
   top:25%;
   padding-left:30px;
   width: 100%;
-  height: 100vh;
+  overflow: hidden;            /*responsive CSS divs overlap each other   stack*/
   margin:10px 0 40px;
 
 }
@@ -126,23 +142,48 @@ img{
 .social-media-list-in a+a{             /*space b/t icons*/
     padding-left:10px;
 }
+.scroll{
+    text-align:center;
+}
+
 
 @media(max-width: 700px)
 {
+   .row{
+        flex-direction: column-reverse;
+        margin: 50px 0;
+        flex-basic:100%;
+        display: flex;
+    }
     h1{
     font-size:20px;
         }
     .intro{
-    background-color:white;
+
     width:auto;
     height:auto;
     }
-
-    .img{
-    display:none;
-
+    .scroll{
+    display: none;
     }
+    .image{
+/*
+    padding-top: 0px;
+
+    position:relative;
+    width: auto;
+
+    object-fit: scale-down;
+*/
+
+        display: none;
+
+        height: 50vh;
+    }
+
+
 }
+
 /*---------ABOUT-------*/
 
 .about{
@@ -583,16 +624,16 @@ img{
   content: "80%";
 }
 .progress-line.javascript span::after{
-  content: "60%";
+  content: "70%";
 }
 .progress-line.bootstrp span::after{
-  content: "70%";
+  content: "80%";
 }
 .progress-line.postgre span::after{
-  content: "70%";
+  content: "80%";
 }
 .progress-line.mysql span::after{
-  content: "70%";
+  content: "80%";
 }
 /*-----------------end--------------*/
 
@@ -703,10 +744,10 @@ img{
   content: "90%";
 }
 .progress-line.corel span::after{
-  content: "70%";
+  content: "80%";
 }
 .progress-line.illus span::after{
-  content: "70%";
+  content: "80%";
 }
 .progress-line.indes span::after{
   content: "70%";
@@ -719,11 +760,14 @@ img{
    .skills{
     width: auto;
     height:auto;
-    margin:auto;
-    font-size:1px;
   }
   .skill-bars{
+  text-align:left;
   item-size:10px;
+  width: 40vh;
+
+
+
   }
 }
 /*---------------*/
