@@ -756,20 +756,7 @@ img{
   content: "80%";
 }
 
-@media screen and (max-width: 850px) {
-   .skills{
-    width: auto;
-    height:auto;
-  }
-  .skill-bars{
-  text-align:left;
-  item-size:10px;
-  width: 40vh;
 
-
-
-  }
-}
 /*---------------*/
 .section-title dark-blue-text h1{
                     text-align:center
@@ -1110,4 +1097,14 @@ hr {
     .img{
      display: none;
     }
+
+    .skills{
+    width: auto;
+    height:auto;
     }
+    .skill-bars{
+    text-align:left;
+    item-size:10px;
+    width: 40vh;
+    }
+}

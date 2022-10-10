@@ -1,0 +1,1 @@
+web: gunicorn self_portfolio.wsg --log-file -
